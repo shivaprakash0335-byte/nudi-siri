@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nudi Siri Travels</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: #0b5ed7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 40px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        section {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            background: #25d366;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nudi Siri Travels</h1>
+    <p>Premium & Reliable Travel Services</p>
+</header>
+
+<div class="hero">
+    <h1>Safe • Comfortable • Professional Journeys</h1>
+    <p>Across Karnataka & South India</p>
+</div>
+
+<section>
+    <h2>Our Services</h2>
+    <div class="card">
+        🚍 Tour Packages <br>
+        🚌 Outstation Travel <br>
+        ⭐ Premium Bus Rentals
+    </div>
+</section>
+
+<section>
+    <h2>Special Offers</h2>
+    <div class="card">
+        🎉 Festive Benefits <br>
+        👥 Group Advantages <br>
+        💎 Premium Experience
+    </div>
+</section>
+
+<section>
+    <h2>Contact & Booking</h2>
+    <div class="card">
+        📞 Phone: 7259218808, 7019163319 <br>
+        📧 Email: Jay75887@gmail.com
+
+        <form onsubmit="sendWhatsApp(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <textarea id="details" placeholder="Travel Details" required></textarea>
+            <button type="submit">Send Enquiry via WhatsApp</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    © 2026 Nudi Siri Travels | All Rights Reserved
+</footer>
+
+<script>
+function sendWhatsApp(event) {
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var details = document.getElementById("details").value;
+
+    var message = `Name: ${name}%0APhone: ${phone}%0ADetails: ${details}`;
+    var whatsappURL = `https://wa.me/917259218808?text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
+
+</body>
+</html>
